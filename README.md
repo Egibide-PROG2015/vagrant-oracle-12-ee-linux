@@ -24,6 +24,28 @@ El proceso de instalación durará entre 20 y 30 minutos.
 - En la máquina virtual la carpeta `/vagrant` corresponde a la carpeta donde tengamos el Vagrantfile.
 - La base de datos esta escuchando en el puerto por defecto, el 1521.
 
+## Comandos básicos de Vagrant
+
+### Arrancar el servidor
+```bash
+vagrant up
+```
+
+### Pausar el servidor
+```bash
+vagrant suspend
+```
+
+### Apagar el servidor
+```bash
+vagrant halt
+```
+
+### Borrar el servidor
+```bash
+vagrant destroy
+```
+
 ### Acceder por SSH al servidor
 ```bash
 vagrant ssh
