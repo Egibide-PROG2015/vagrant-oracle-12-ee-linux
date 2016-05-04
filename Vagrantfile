@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
     db12102.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm"     , :id, "--memory", "4096"]
-      vb.gui = true
+      vb.gui = false
       vb.customize ["modifyvm"     , :id, "--name"  , "db12102"]
       vb.customize ["modifyvm"     , :id, "--cpus"  , 2]
     end
