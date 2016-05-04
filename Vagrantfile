@@ -8,7 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "db12102" , primary: true do |db12102|
     db12102.vm.box = "centos-6.5-x86_64"
-    db12102.vm.box_url = "http://nunki.diocesanas.org/mv/vagrant/centos-6.5-x86_64.box"
+    db12102.vm.box_url = ["http://nunki.diocesanas.org/mv/vagrant/centos-6.5-x86_64.box",
+                          "https://dl.dropboxusercontent.com/s/np39xdpw05wfmv4/centos-6.5-x86_64.box"]
 
     db12102.vm.hostname = "db12c.example.com"
     db12102.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777","fmode=777"]
