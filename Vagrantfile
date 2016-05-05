@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     db12102.vm.network :private_network, ip: "10.10.10.9"
   
     db12102.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm"     , :id, "--memory", "4096"]
+      vb.customize ["modifyvm"     , :id, "--memory", "2048"]
       vb.gui = false
       vb.customize ["modifyvm"     , :id, "--name"  , "db12102"]
       vb.customize ["modifyvm"     , :id, "--cpus"  , 2]
