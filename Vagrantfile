@@ -25,8 +25,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
   
-    db12102.vm.provision :shell, :inline => "ln -sf /vagrant/puppet/hiera.yaml /etc/puppet/hiera.yaml;rm -rf /etc/puppet/modules;ln -sf /vagrant/puppet/modules /etc/puppet/modules"
-    
+    db12102.vm.provision :shell, inline: <<-SHELL
+      ln -sf /vagrant/puppet/hiera.yaml /etc/puppet/hiera.yaml
+      rm -rf /etc/puppet/modules
+      ln -sf /vagrant/puppet/modules /etc/puppet/modules
+
+      if ping -c 1 -w 5 nunki.diocesanas.org &> /dev/null
+      then
+        echo 'proxy=http://proxyaulas.diocesanas.org:8080' >> /etc/yum.conf
+      fi
+    SHELL
+
     db12102.vm.provision :puppet do |puppet|
       puppet.manifests_path    = "puppet/manifests"
       puppet.module_path       = "puppet/modules"
