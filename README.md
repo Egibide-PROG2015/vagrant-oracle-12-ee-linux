@@ -1,6 +1,6 @@
 # Oracle 12c en Linux con Vagrant
 
-Archivos de configuración para una máquina virtual con Oracle Database 12.1.0.2 en Oracle Linux 6.5 (64 bit) usando sólo Vagrant y los dos ficheros de instalación de la base de datos.
+Archivos de configuración para una máquina virtual con Oracle Database 12.1.0.2 en Linux CentOS 6.5 (64 bits) usando sólo Vagrant y los dos ficheros de instalación de la base de datos.
 
 ## Inicio rápido
 
