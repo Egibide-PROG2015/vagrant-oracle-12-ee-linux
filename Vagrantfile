@@ -23,17 +23,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm"     , :id, "--name"  , "db12102"]
       vb.customize ["modifyvm"     , :id, "--cpus"  , 2]
     end
-
   
     db12102.vm.provision :shell, inline: <<-SHELL
       ln -sf /vagrant/puppet/hiera.yaml /etc/puppet/hiera.yaml
       rm -rf /etc/puppet/modules
       ln -sf /vagrant/puppet/modules /etc/puppet/modules
-
-      if ping -c 1 -w 5 nunki.diocesanas.org &> /dev/null
-      then
-        echo 'proxy=http://proxyaulas.diocesanas.org:8080' >> /etc/yum.conf
-      fi
     SHELL
 
     db12102.vm.provision :puppet do |puppet|
@@ -46,9 +40,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "environment" => "development",
         "vm_type"     => "vagrant",
       }
-      
     end
-  
   end
-
 end
