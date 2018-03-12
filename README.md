@@ -5,13 +5,15 @@ Archivos de configuración para una máquina virtual con Oracle Database 12.1.0.
 ## Inicio rápido
 
 1. Descargar e instalar [VirtualBox][2] y sus extensiones cuando lo pida.
-1. Descargar e instalar [Vagrant][1].
-1. Clonar [este repositorio][3] de GitHub en una carpeta del ordenador.
-1. Descargar los archivos zip de instalación:
-  - Desde [nunki][5] (solo disponible dentro de Egibide). 
-  - Desde la web de [Oracle OTN][4] (requiere registrarse y aceptar el acuerdo de licencia). Bajar los dos archivos zip correspondientes a _Oracle Database 12c Release 1 (12.1.0.2.0) for Linux x86-64_.
-1. Poner los dos archivos zip descargados en la carpeta [oracle12ee](./oracle12ee/), sin descomprimir ni crear ningún subdirectorio adicional.
-1. Usando el CLI, ejecutar el comando `vagrant up` en la carpeta que contiene el Vagrantfile.
+2. Descargar e instalar [Vagrant][1].
+3. Clonar [este repositorio][3] de GitHub en una carpeta del ordenador.
+4. Descargar los archivos zip de instalación:
+
+	- Desde [nunki][5] (solo disponible dentro de Egibide). 
+	- Desde la web de [Oracle OTN][4] (requiere registrarse y aceptar el acuerdo de licencia). Bajar los dos archivos zip correspondientes a _Oracle Database 12c Release 1 (12.1.0.2.0) for Linux x86-64_.
+
+5. Poner los dos archivos zip descargados en la carpeta [oracle12ee](./oracle12ee/), sin descomprimir ni crear ningún subdirectorio adicional.
+6. Usando el CLI, ejecutar el comando `vagrant up` en la carpeta que contiene el Vagrantfile.
 
 El proceso de instalación durará entre 20 y 30 minutos.
 
@@ -41,7 +43,7 @@ vagrant suspend
 vagrant halt
 ```
 
-### Borrar el servidor
+### Borrar el servidor ⚠
 ```bash
 vagrant destroy
 ```
