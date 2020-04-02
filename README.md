@@ -1,3 +1,5 @@
+> :warning: Este repositorio está obsoleto, es recomendable usar la [versión con Docker](https://github.com/egibide/oracle12c) en vez de Vagrant.
+
 # Oracle 12c en Linux con Vagrant
 
 Archivos de configuración para una máquina virtual con Oracle Database 12.1.0.2 en Linux CentOS 6.5 (64 bits) usando sólo Vagrant y los dos ficheros de instalación de la base de datos.
